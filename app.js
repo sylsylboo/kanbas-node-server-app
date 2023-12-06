@@ -11,7 +11,7 @@ import "dotenv/config";
 import session from "express-session";
 
 
-const CONNECTION_STRING = "mongodb+srv://sylviawing96:sylviawing72273@clusterkanbas.5ud86ou.mongodb.net/?retryWrites=true&w=majority" || "mongodb://127.0.0.1:27017/kanbas"
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
 mongoose.connect(CONNECTION_STRING); // connect to the kanbas db
 
 const app = express();
