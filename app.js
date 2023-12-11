@@ -37,6 +37,8 @@ if (process.env.NODE_ENV !== "development") {
         secure: true,
     };
 }
+
+app.enable('trust proxy');
 app.use(session(sessionOptions));
 
 Hello(app);
